@@ -1,0 +1,300 @@
+import Mock from "mockjs";
+import { doCustomTimes } from "@/libs/util";
+
+export const getProcessPageData = req => {
+  let getProcessPageData = {
+    data: {
+      pageData: [
+        {
+          createTime: 1564306165000,
+          id: 1,
+          modifiedTime: 1564306171000,
+          name: "credit",
+          recordGlobalParam: true,
+          recordNodeInstance: true,
+          recordProcessInput: true,
+          recordProcessInstance: true,
+          recordTriggerInput: true,
+          recordTriggerResult: true,
+          version: 1,
+        },
+      ],
+      total: 1,
+    },
+    resultCode: "SUCCESS",
+    resultMsg: "处理成功",
+    success: true,
+  };
+
+  return getProcessPageData;
+};
+
+export const getProcessNodeData = req => {
+  let getProcessNodeData = {
+    data: [
+      {
+        createTime: 1564838402000,
+        executeCompoment: "startExecution",
+        id: 1,
+        isProtected: true,
+        isSync: true,
+        maxExeTime: 1000,
+        modifiedTime: 1564838406000,
+        name: "start",
+        nodeType: 1,
+        processId: 1,
+        stage: "开始",
+      },
+      {
+        createTime: 1564837584000,
+        executeCompoment: "accessExecution",
+        id: 2,
+        isProtected: true,
+        isSync: true,
+        maxExeTime: 1000,
+        modifiedTime: 1564837589000,
+        name: "access",
+        nodeType: 1,
+        preNodeId: "1",
+        processId: 1,
+        stage: "准入",
+      },
+      {
+        createTime: 1564837782000,
+        executeCompoment: "preCreditExecution",
+        id: 3,
+        isProtected: true,
+        isSync: true,
+        maxExeTime: 1000,
+        modifiedTime: 1564837786000,
+        name: "pre_credit",
+        nodeType: 1,
+        preNodeId: "2",
+        processId: 1,
+        stage: "预授信",
+      },
+      {
+        createTime: 1564837870000,
+        executeCompoment: "preCreditQueryExecution",
+        id: 4,
+        isProtected: true,
+        isSync: true,
+        maxExeTime: 1000,
+        modifiedTime: 1564837872000,
+        name: "pre_credit_query",
+        nodeType: 4,
+        preNodeId: "3",
+        processId: 1,
+        stage: "预授信查询",
+      },
+      {
+        createTime: 1564838007000,
+        executeCompoment: "creditExecution",
+        id: 5,
+        isProtected: true,
+        isSync: true,
+        maxExeTime: 1000,
+        modifiedTime: 1564838011000,
+        name: "credit",
+        nodeType: 1,
+        preNodeId: "4",
+        processId: 1,
+        stage: "授信",
+      },
+      {
+        createTime: 1564838061000,
+        executeCompoment: "creditQueryExecution",
+        id: 6,
+        isProtected: true,
+        isSync: true,
+        maxExeTime: 1000,
+        modifiedTime: 1564838065000,
+        name: "credit_query",
+        nodeType: 4,
+        preNodeId: "5",
+        processId: 1,
+        stage: "授信查询",
+      },
+      {
+        createTime: 1564838148000,
+        executeCompoment: "bindingCardExecution",
+        id: 7,
+        isProtected: true,
+        isSync: true,
+        maxExeTime: 1000,
+        modifiedTime: 1564838152000,
+        name: "binding_card",
+        nodeType: 2,
+        preNodeId: "6",
+        processId: 1,
+        stage: "银行卡绑定",
+      },
+      {
+        createTime: 1564838314000,
+        executeCompoment: "signExecution",
+        id: 8,
+        isProtected: true,
+        isSync: true,
+        maxExeTime: 1000,
+        modifiedTime: 1564838318000,
+        name: "sign",
+        nodeType: 1,
+        preNodeId: "7",
+        processId: 1,
+        stage: "签约",
+      },
+      {
+        createTime: 1564838505000,
+        executeCompoment: "endExecution",
+        id: 9,
+        isProtected: true,
+        isSync: true,
+        maxExeTime: 1000,
+        modifiedTime: 1564838507000,
+        name: "end",
+        nodeType: 1,
+        preNodeId: "8",
+        processId: 1,
+        stage: "结束",
+      },
+    ],
+    resultCode: "SUCCESS",
+    resultMsg: "处理成功",
+    success: true,
+  };
+
+  return getProcessNodeData;
+};
+
+export const getProcessInstancePageData = req => {
+  let getProcessInstancePageData = {
+    data: {
+      pageData: [
+        {
+          bizNo: "00d14a1a-d60e-4092-a047-23ab01c52648",
+          createTime: 1569162739000,
+          id: 46,
+          modifiedTime: 1569162739000,
+          processId: 1,
+        },
+        {
+          bizNo: "7f3d6d71-0590-4a8f-bdf0-bcae0c9d5ad6",
+          createTime: 1569162213000,
+          id: 45,
+          modifiedTime: 1569162213000,
+          processId: 1,
+        },
+        {
+          bizNo: "0bd91507-4dce-4ae5-8b43-f4eb5592b860",
+          createTime: 1569139457000,
+          id: 44,
+          modifiedTime: 1569139457000,
+          processId: 1,
+        },
+        {
+          bizNo: "fc8d7ae0-b209-497a-baf3-d16211332ef8",
+          createTime: 1569139288000,
+          id: 43,
+          modifiedTime: 1569139288000,
+          processId: 1,
+        },
+        {
+          bizNo: "8076c838-b02a-411a-b69f-1b3c42f5fe87",
+          createTime: 1569139030000,
+          id: 42,
+          modifiedTime: 1569139030000,
+          processId: 1,
+        },
+        {
+          bizNo: "4b996290-9c29-4516-ad99-769dab074f44",
+          createTime: 1569138806000,
+          id: 41,
+          modifiedTime: 1569138806000,
+          processId: 1,
+        },
+        {
+          bizNo: "c880c584-eef9-421d-adf6-a979d69c7ec6",
+          createTime: 1569138453000,
+          id: 40,
+          modifiedTime: 1569138453000,
+          processId: 1,
+        },
+        {
+          bizNo: "4d826f71-6ead-4bf8-808d-ab559057009c",
+          createTime: 1569138281000,
+          id: 39,
+          modifiedTime: 1569138281000,
+          processId: 1,
+        },
+        {
+          bizNo: "96230068-f1b5-47e8-aff0-07e01431a3df",
+          createTime: 1568766077000,
+          id: 38,
+          modifiedTime: 1568766077000,
+          processId: 1,
+        },
+        {
+          bizNo: "77c53ebc-1de9-40df-af56-849f6e72ca46",
+          createTime: 1568765891000,
+          id: 37,
+          modifiedTime: 1568765891000,
+          processId: 1,
+        },
+      ],
+      total: 46,
+    },
+    resultCode: "SUCCESS",
+    resultMsg: "处理成功",
+    success: true,
+  };
+
+  return getProcessInstancePageData;
+};
+
+export const getProcessNodeInstanceData = req => {
+  let getProcessNodeInstanceData = {
+    data: [
+      {
+        bizNo: "5cfc9157-bf1a-4688-a341-9702e8e2189e",
+        createTime: 1566657446000,
+        execCount: 0,
+        failedCount: 0,
+        id: 1,
+        modifiedTime: 1566657446000,
+        nodeId: 1,
+        processInstanceId: 1,
+        recoverTime: 1566657446000,
+        status: 2,
+      },
+      {
+        bizNo: "5cfc9157-bf1a-4688-a341-9702e8e2189e",
+        createTime: 1566657473000,
+        execCount: 0,
+        failedCount: 0,
+        id: 2,
+        modifiedTime: 1566657473000,
+        nodeId: 2,
+        processInstanceId: 1,
+        recoverTime: 1566657473000,
+        status: 2,
+      },
+      {
+        bizNo: "5cfc9157-bf1a-4688-a341-9702e8e2189e",
+        createTime: 1566657501000,
+        execCount: 0,
+        failedCount: 0,
+        id: 3,
+        modifiedTime: 1566657501000,
+        nodeId: 3,
+        processInstanceId: 1,
+        recoverTime: 1566657501000,
+        status: 2,
+      },
+    ],
+    resultCode: "SUCCESS",
+    resultMsg: "处理成功",
+    success: true,
+  };
+
+  return getProcessNodeInstanceData;
+};
