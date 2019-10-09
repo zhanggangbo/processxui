@@ -66,6 +66,7 @@ export default function renderG6(id, template, options) {
           radius: height / 2,
         },
       });
+      
       // 绘制icon
       const iconHeight = 30;
       const iconWidth = 30;
