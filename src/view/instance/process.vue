@@ -13,7 +13,7 @@
           type="primary"
           icon="ios-search"
           :disabled="!searchParam.queryData"
-          @on-change="searchProcessInstancePageData"
+          @click="searchProcessInstancePageData"
         >搜索</Button>
       </div>
 
@@ -62,7 +62,7 @@ export default {
           render: (h, params) => {
             return h(node, {
               props: {
-                bizNo: params.bizNo
+                bizNo: params.row.bizNo
               }
             });
           }

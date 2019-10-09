@@ -58,7 +58,7 @@ export default [
         meta: {
           icon: "md-git-network",
           title: "流程节点",
-          // hideInMenu: true,
+          hideInMenu: true,
         },
         component: () => import("@/view/process/node"),
       },

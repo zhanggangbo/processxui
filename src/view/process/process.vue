@@ -13,7 +13,7 @@
           type="primary"
           icon="ios-search"
           :disabled="!searchParam.queryData"
-          @on-change="searchProcessPageData"
+          @click="searchProcessPageData"
         >搜索</Button>
       </div>
 
