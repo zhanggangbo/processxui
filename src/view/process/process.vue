@@ -13,7 +13,7 @@
           type="primary"
           icon="ios-search"
           :disabled="!searchParam.queryData"
-          @click="searchProcessPageData"
+          @click="searchProcessPageData(1)"
         >搜索</Button>
       </div>
 
@@ -248,8 +248,8 @@ export default {
     },
 
     onPageSizeChange(pageSize) {
-      this.pageData.pageSize = pageSize;
-      this.searchProcessInstancePageData(1);
+      this.searchParam.pageSize = pageSize;
+      this.searchProcessPageData(1);
     },
 
     gotoNode(data) {

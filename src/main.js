@@ -7,6 +7,7 @@ import store from "./store";
 import iView from "iview";
 import "./index.less";
 import config from "@/config";
+import 'iview/dist/styles/iview.css';
 
 Vue.config.productionTip = false;
 

@@ -66,7 +66,7 @@ export default function renderG6(id, template, options) {
           radius: height / 2,
         },
       });
-      
+
       // 绘制icon
       const iconHeight = 30;
       const iconWidth = 30;
@@ -114,7 +114,7 @@ export default function renderG6(id, template, options) {
     container: id,
     /** 画布高 */
     height: window.outerHeight, // 画布高
-    width: 500,
+    width: 600,
     modes: {
       default: ["click-select", "drag-canvas", "zoom-canvas"],
     },
